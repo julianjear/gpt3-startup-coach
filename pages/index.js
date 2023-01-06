@@ -1,6 +1,19 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
+import Head from "next/head";
+import Image from "next/image";
+import buildspaceLogo from "../assets/buildspace-logo.png";
+import {
+  Text,
+  Heading,
+  // Image,
+  Link,
+  OrderedList,
+  ListItem,
+  HStack,
+  Box,
+  Input,
+  Button,
+  Textarea,
+} from "@chakra-ui/react";
 
 const Home = () => {
   return (
@@ -10,20 +23,21 @@ const Home = () => {
       </Head>
       <div className="container">
         <div className="header">
-          <div className="header-title">
-            <h1>sup, insert your headline here</h1>
-          </div>
-          <div className="header-subtitle">
-            <h2>insert your subtitle here</h2>
-          </div>
+          <Heading as="h1">Omniscient Startup Coach</Heading>
+          <Text>Input a challenge you are facing in your startup</Text>
+          <Textarea
+            resize="none"
+            borderRadius="8px"
+            w={"90%"}
+            // w={["90%", "70%", "50%"]}
+            h={"200px"}
+            fontSize="20px"
+            padding="8px"
+          />
         </div>
       </div>
       <div className="badge-container grow">
-        <a
-          href="https://buildspace.so/builds/ai-writer"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://buildspace.so/builds/ai-writer" target="_blank" rel="noreferrer">
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
             <p>build with buildspace</p>
