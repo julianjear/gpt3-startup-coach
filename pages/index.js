@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import buildspaceLogo from "../assets/buildspace-logo.png";
@@ -16,6 +17,8 @@ import {
 } from "@chakra-ui/react";
 
 const Home = () => {
+  const [userInput, setUserInput] = useState("");
+
   return (
     <div className="root">
       <Head>
@@ -33,6 +36,8 @@ const Home = () => {
             h={"200px"}
             fontSize="20px"
             padding="8px"
+            value={userInput}
+            onChange={(newValue) => setUserInput(newValue)}
           />
         </div>
       </div>
